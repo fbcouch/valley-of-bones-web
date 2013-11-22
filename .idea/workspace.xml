@@ -2,32 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a86ab6-7e5a-410e-92c2-a7db22becf49" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/level_ui.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/src/screen.coffee" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/Game.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/map/Map.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" afterPath="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/VOB.coffee" afterPath="$PROJECT_DIR$/www/src/VOB.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/main.coffee" afterPath="$PROJECT_DIR$/www/src/main.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/main_menu.html" afterPath="$PROJECT_DIR$/www/main_menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="valley-of-bones-web.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385149015100" ignored="false" />
-    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148447552" ignored="false" />
+    <file path="/index.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156765589" ignored="false" />
+    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385154705742" ignored="false" />
     <file path="/a.dummy" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038877375" ignored="false" />
     <file path="/units.json" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038950936" ignored="false" />
-    <file path="/Dummy.txt" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148086539" ignored="false" />
+    <file path="/Dummy.txt" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385153696032" ignored="false" />
     <file path="/screen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385147514590" ignored="false" />
     <file path="/main_menu.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385147574302" ignored="false" />
     <file path="/SplashScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148231170" ignored="false" />
     <file path="/MainMenuScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148349599" ignored="false" />
     <file path="/AssetManager.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148463908" ignored="false" />
-    <file path="/LevelScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385150222007" ignored="false" />
+    <file path="/LevelScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385158521423" ignored="false" />
     <file path="/level_ui.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385150183195" ignored="false" />
     <file path="/index.css" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385149991280" ignored="false" />
+    <file path="/Map.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156372385" ignored="false" />
+    <file path="/VOB.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156490749" ignored="false" />
+    <file path="/Game.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385158671347" ignored="false" />
+    <file path="$PROJECT_DIR$/www/out/Map.js" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156753607" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +89,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="30" selection-start="1067" selection-end="1067" vertical-scroll-proportion="-17.642857">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LevelScreen.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="16" selection-start="299" selection-end="299" vertical-scroll-proportion="0.30609897">
+            <state line="101" column="0" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.8089758">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenuScreen.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/src/screens/MainMenuScreen.coffee">
+      <file leaf-file-name="VOB.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/VOB.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="19" selection-start="159" selection-end="241" vertical-scroll-proportion="0.0">
+            <state line="39" column="79" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Map.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/map/Map.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="39" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/Game.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="15" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,20 +154,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/assets/units.json" />
         <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/www/src/screen.coffee" />
         <option value="$PROJECT_DIR$/www/main_menu.html" />
-        <option value="$PROJECT_DIR$/www/src/VOB.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/screen.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/SplashScreen.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/Screen.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/MainMenuScreen.coffee" />
-        <option value="$PROJECT_DIR$/www/src/main.coffee" />
         <option value="$PROJECT_DIR$/www/src/AssetManager.coffee" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/level_ui.html" />
+        <option value="$PROJECT_DIR$/www/src/main.coffee" />
+        <option value="$PROJECT_DIR$/www/css/index.css" />
+        <option value="$PROJECT_DIR$/www/src/map/Map.coffee" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/src/VOB.coffee" />
+        <option value="$PROJECT_DIR$/www/src/Game.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
       </list>
     </option>
@@ -175,6 +206,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -261,6 +294,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -301,42 +356,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="art" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valley-of-bones-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="art" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="exported" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,13 +365,13 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="settings" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="settings" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -384,6 +405,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -412,19 +446,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -438,13 +459,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -466,6 +480,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -490,7 +511,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -507,6 +527,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -576,20 +597,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="23" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="123" column="23" selection-start="3271" selection-end="3271" vertical-scroll-proportion="0.33256617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/out/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -606,16 +613,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="38" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.26635513">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/VOB.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="76" selection-end="76" vertical-scroll-proportion="0.06559263">
-          <folding />
-        </state>
+        <state line="12" column="38" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.26635513" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/screens/SplashScreen.coffee">
@@ -632,37 +630,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="43" selection-start="960" selection-end="960" vertical-scroll-proportion="0.5466053">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/screens/Screen.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="183" selection-end="183" vertical-scroll-proportion="0.17491369">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/main_menu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="40" selection-start="377" selection-end="377" vertical-scroll-proportion="0.13555291">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="11" selection-start="1297" selection-end="1297" vertical-scroll-proportion="0.75949365">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/screens/MainMenuScreen.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="19" selection-start="159" selection-end="241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -674,16 +644,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/screens/MainMenuScreen.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="14" selection-start="203" selection-end="203" vertical-scroll-proportion="0.26237053">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="31" selection-start="620" selection-end="620" vertical-scroll-proportion="0.021864211">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/screens/Screen.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="21" selection-start="183" selection-end="183" vertical-scroll-proportion="0.17491369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="48" selection-start="202" selection-end="202" vertical-scroll-proportion="0.11296076">
+        <state line="33" column="30" selection-start="1067" selection-end="1067" vertical-scroll-proportion="-17.642857">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/VOB.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="79" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/Game.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="15" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/map/Map.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="39" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="16" selection-start="299" selection-end="299" vertical-scroll-proportion="0.30609897">
+        <state line="101" column="0" selection-start="2401" selection-end="2401" vertical-scroll-proportion="0.8089758">
           <folding />
         </state>
       </provider>

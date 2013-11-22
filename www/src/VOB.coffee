@@ -12,7 +12,8 @@ class VOB
 
   start: () ->
 #    @setSplashScreen()
-    @setMainMenuScreen()
+#    @setMainMenuScreen()
+    @setLevelScreen()
 
   setScreen: (screen) ->
     if @screen?
@@ -36,6 +37,6 @@ class VOB
 
   setLevelScreen: () ->
     console.log 'setLevelScreen'
-    @setScreen(new valleyofbones.LevelScreen(@, 'test_level', []))
+    @setScreen(new valleyofbones.LevelScreen(new valleyofbones.Game('test_level', [])))
 
 valleyofbones.VOB = VOB

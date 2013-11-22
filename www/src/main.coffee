@@ -24,6 +24,7 @@ $(document).on 'ready', ->
 
   window.canvas = $('#gameCanvas')[0]
   window.stage = new createjs.Stage canvas
+#  createjs.Touch.enable(stage)
   window.game = new valleyofbones.VOB(stage)
 
   canvas.width = document.documentElement.clientWidth
