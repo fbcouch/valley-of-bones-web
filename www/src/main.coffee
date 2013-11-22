@@ -40,7 +40,7 @@ $(document).on 'ready', ->
   preload.loadManifest manifest
   preload.addEventListener 'complete', =>
     # do something
-    window.asset_mgr = new AssetManager(preload.getResult('assets-img'), preload.getResult('assets-json'))
+    window.asset_mgr = new valleyofbones.AssetManager(preload.getResult('assets-img'), preload.getResult('assets-json'))
 
     game.start()
 
@@ -55,55 +55,6 @@ $(document).on 'ready', ->
     $('#ui .progress span').html("Loading #{progress.loaded * 100|0}%")
 
 
-class AssetManager
-  constructor: (@image, @json) ->
 
-  get: (key) ->
-    @json.frames["#{key}.png"] or {}
-
-  get_bitmap: (key) ->
-    bitmap = new createjs.Bitmap @image
-    defs = @get(key)
-    bitmap.sourceRect =
-      x:      defs.frame.x
-      y:      defs.frame.y
-      width:  defs.frame.w
-      height: defs.frame.h
-    bitmap.width = defs.frame.w
-    bitmap.height = defs.frame.h
-    bitmap
-
-class VOB
-  constructor: (@stage) ->
-    @screen = null
-
-  resize: (@width, @height) ->
-    @screen?.resize(@width, @height)
-
-  start: () ->
-#    @setSplashScreen()
-     @setMainMenuScreen()
-
-  setScreen: (screen) ->
-    if @screen?
-      @stage.removeChild @screen
-      @screen.hide()
-    @screen = screen
-    @stage.addChild @screen
-    @screen.show()
-    @screen.resize(@width, @height)
-
-  update: (delta) ->
-    @screen?.update(delta)
-
-  setSplashScreen: () ->
-    console.log 'setSplashScreen'
-    @setScreen(new valleyofbones.SplashScreen(@))
-
-  setMainMenuScreen: () ->
-    console.log 'setMainMenuScreen'
-    @setScreen(new valleyofbones.MainMenuScreen(@))
-
-valleyofbones.VOB = VOB
 
 

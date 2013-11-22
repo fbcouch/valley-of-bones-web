@@ -3,71 +3,7 @@
 <head>
     <title>Valley of Bones | Presented by AHS Gaming</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <style>
-        html, body {
-            background-color: #000;
-            overflow: hidden;
-            margin: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-        }
-
-        #gameCanvas {
-            height: 100%;
-            width: 100%;
-            z-index: -100;
-        }
-
-        #ui {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .row {
-            height: 100%;
-            width: 100%;
-        }
-
-        .row > div {
-            height: 100%;
-
-        }
-
-        .pull-bottom {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .pull-bottom > .progress {
-            margin-bottom: 0;
-        }
-
-        .main-menu {
-            width: 500px;
-            margin: auto;
-        }
-
-        @media (max-width:500px) {
-            .main-menu {
-                width: 100%;
-            }
-        }
-
-        .main-menu h1 {
-            text-transform: uppercase;
-            color: #ccc;
-        }
-        .main-menu button {
-            width: 100%;
-            display: block;
-            margin-top: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
@@ -85,7 +21,14 @@
     <script src="lib/bootstrap.min.js"></script>
     <script src="lib/createjs-2013.09.25.min.js"></script>
     <script src="out/main.js"></script>
-    <script src="out/screen.js"></script>
+    <script src="out/AssetManager.js"></script>
+    <script src="out/VOB.js"></script>
+
+    <script src="out/Screen.js"></script>
+    <script src="out/SplashScreen.js"></script>
+    <script src="out/MainMenuScreen.js"></script>
+    <script src="out/LevelScreen.js"></script>
+
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="lib/index.js"></script>
