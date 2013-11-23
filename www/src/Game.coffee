@@ -8,13 +8,18 @@
 # Make sure this is decoupled from the view!!
 class Game
   constructor: (@map_name, @players) ->
+    createjs.EventDispatcher.initialize(@)
+
     # TODO load maps from json docs
     map_def =
-      tiles: ((1 for j in [0...20]) for i in [0...10])
+      tiles: ((1 for j in [0...20]) for i in [0...9])
 
     @map = new valleyofbones.Map(map_def)
 
     @units = []
+
+    @units.push new valleyofbones.Unit(preload.getResult('units').entities[0], null)
+    @units[0].boardX = 1
 
   start_game: () ->
 
@@ -33,6 +38,5 @@ class Game
   build: () ->
 
   move: () ->
-
 
 valleyofbones.Game = Game
