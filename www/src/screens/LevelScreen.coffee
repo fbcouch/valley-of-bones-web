@@ -23,6 +23,9 @@ class LevelScreen extends valleyofbones.Screen
     @ui_layer = new createjs.Container()
     @ui_layer.addChild(@turn_panel)
 
+    @build_panel = new valleyofbones.BuildPanel(@game)
+    @ui_layer.addChild(@build_panel)
+
   show: ->
     super()
 
@@ -44,5 +47,9 @@ class LevelScreen extends valleyofbones.Screen
   update: (delta) ->
     @map?.update?(delta)
     @turn_panel.update(delta)
+    @build_panel.update(delta)
+
+    @build_panel.x = 0
+    @build_panel.y = @height - @build_panel.height
 
 valleyofbones.LevelScreen = LevelScreen

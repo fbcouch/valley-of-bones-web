@@ -7,17 +7,17 @@ class TurnPanel extends valleyofbones.Panel
   constructor: (@game) ->
     super()
 
-    @timer_text = new createjs.Text '', 'normal 40px courier', '#CCC'
-    @addChild @timer_text
+#    @timer_text = new createjs.Text '', 'normal 40px courier', '#CCC'
+#    @addChild @timer_text
 
     btn_style =
       width: '100%'
       height: '80px'
-      background: '#333333'
+      background: '#CCC'
       'border-radius': '10px'
       font: 'normal 40px courier'
       'text-align': 'center'
-      color: '#CCC'
+      color: '#000'
       padding:
         bottom: '5px'
       alpha: 0.8
@@ -27,11 +27,30 @@ class TurnPanel extends valleyofbones.Panel
     @btn_end_turn.on 'click', =>
       console.log 'clicked'
 
+    @player_texts = {}
+
+    @turn_indicator = asset_mgr.get_bitmap('reticule')
+    @addChild(@turn_indicator)
+
   update: (delta) ->
     @btn_end_turn.layout()
-    @timer_text.text = "TIME LEFT 00:00"
+    y = 0
+    x = @turn_indicator.width + 5
+    for player in @game.players
+      if not @player_texts[player.id]
+        text = new createjs.Text player.name.toUpperCase(), 'normal 40px courier', "##{if player.color[0] then 'F' else '0'}#{if player.color[1] then 'F' else '0'}#{if player.color[2] then 'F' else '0'}"
+        @player_texts[player.id] = text
+        @addChild text
+      else
+        text = @player_texts[player.id]
+      text.x = x
+      text.y = y
+      y += text.getBounds()?.height + 10
+      if @game.get_current_player() is player
+        @turn_indicator.x = 0
+        @turn_indicator.y = text.y + (text.getBounds()?.height - @turn_indicator.height) * 0.5 + 5
 
-    @btn_end_turn.y = @timer_text.y + @timer_text.getBounds().height + 30
+    @btn_end_turn.y = y
 
     super(delta)
 

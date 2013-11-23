@@ -18,6 +18,8 @@ class Game
 
     @units = []
 
+    @current_player = 0
+
   start_game: () ->
     for player, i in @players
       unit = new valleyofbones.Unit(preload.getResult('units').entities[0], player)
@@ -41,5 +43,8 @@ class Game
   build: () ->
 
   move: () ->
+
+  get_current_player: () ->
+    @players[@current_player]
 
 valleyofbones.Game = Game
