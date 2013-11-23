@@ -1,0 +1,10 @@
+Button
+
+button {
+	width: (% or px)
+	height: (% or px)
+	background: "#FFFFFF"
+	border-radius: (% or px)
+	font: ""
+	text-align: (left|right|center)
+}
