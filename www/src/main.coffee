@@ -18,6 +18,15 @@ manifest = [
 
 #$('body').append("<script src=\"out/#{file}.js\"></script>") for file in sources
 
+window.generate_id = ->
+  _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+  (
+    (
+      for i in [0...16]
+        _keyStr.charAt(Math.random() * _keyStr.length)
+    )
+  ).join('')
+
 $(document).on 'ready', ->
   console.log 'ready'
   window.preload = new createjs.LoadQueue()

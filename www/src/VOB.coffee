@@ -37,6 +37,6 @@ class VOB
 
   setLevelScreen: () ->
     console.log 'setLevelScreen'
-    @setScreen(new valleyofbones.LevelScreen(new valleyofbones.Game('test_level', [])))
+    @setScreen(new valleyofbones.LevelScreen(new valleyofbones.Game('test_level', [new valleyofbones.Player(generate_id(), 'Player 1', [1, 0, 0]), new valleyofbones.Player(generate_id(), 'Player 2', [0, 0, 1])])))
 
 valleyofbones.VOB = VOB

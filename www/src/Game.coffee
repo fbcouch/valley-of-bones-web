@@ -18,10 +18,13 @@ class Game
 
     @units = []
 
-    @units.push new valleyofbones.Unit(preload.getResult('units').entities[0], null)
-    @units[0].boardX = 1
-
   start_game: () ->
+    for player, i in @players
+      unit = new valleyofbones.Unit(preload.getResult('units').entities[0], player)
+      @units.push unit
+      unit.boardX = 1 + 17 * i
+      unit.boardY = 4
+    @dispatchEvent('units_changed')
 
   end_game: () ->
 

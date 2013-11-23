@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a86ab6-7e5a-410e-92c2-a7db22becf49" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/ui/MapView.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/ui/Panel.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/Player.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/ui/TurnPanel.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/src/ui/UnitView.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/Game.coffee" afterPath="$PROJECT_DIR$/www/src/Game.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" afterPath="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/VOB.coffee" afterPath="$PROJECT_DIR$/www/src/VOB.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/main.coffee" afterPath="$PROJECT_DIR$/www/src/main.coffee" />
     </list>
     <ignored path="valley-of-bones-web.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/index.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385162169004" ignored="false" />
-    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385154705742" ignored="false" />
+    <file path="/index.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385222412617" ignored="false" />
+    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385221279305" ignored="false" />
     <file path="/a.dummy" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038877375" ignored="false" />
     <file path="/units.json" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038950936" ignored="false" />
     <file path="/Dummy.txt" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385219824141" ignored="false" />
@@ -18,14 +25,17 @@
     <file path="/SplashScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148231170" ignored="false" />
     <file path="/MainMenuScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385148349599" ignored="false" />
     <file path="/AssetManager.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385161784762" ignored="false" />
-    <file path="/LevelScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385164388237" ignored="false" />
+    <file path="/LevelScreen.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385222003798" ignored="false" />
     <file path="/level_ui.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385150183195" ignored="false" />
     <file path="/index.css" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385149991280" ignored="false" />
     <file path="/Map.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156372385" ignored="false" />
-    <file path="/VOB.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156490749" ignored="false" />
-    <file path="/Game.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385220199795" ignored="false" />
+    <file path="/VOB.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385221240624" ignored="false" />
+    <file path="/Game.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385222528989" ignored="false" />
     <file path="$PROJECT_DIR$/www/out/Map.js" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385156753607" ignored="false" />
     <file path="/Unit.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385161730639" ignored="false" />
+    <file path="/Player.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385220398171" ignored="false" />
+    <file path="/MapView.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385222374486" ignored="false" />
+    <file path="/UnitView.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385222664483" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,16 +99,43 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="1170" selection-end="1170" vertical-scroll-proportion="-22.884615">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LevelScreen.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LevelScreen.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="25" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.24501109">
+            <state line="23" column="35" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapView.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/ui/MapView.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="31" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitView.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/www/src/ui/UnitView.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="105" selection-start="409" selection-end="409" vertical-scroll-proportion="0.22616407">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/src/Player.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,7 +153,7 @@
       <file leaf-file-name="Game.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/src/Game.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="24" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+            <state line="26" column="34" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,22 +186,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/src/screen.coffee" />
-        <option value="$PROJECT_DIR$/www/main_menu.html" />
-        <option value="$PROJECT_DIR$/www/src/screens/screen.coffee" />
-        <option value="$PROJECT_DIR$/www/src/screens/SplashScreen.coffee" />
-        <option value="$PROJECT_DIR$/www/src/screens/Screen.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/MainMenuScreen.coffee" />
         <option value="$PROJECT_DIR$/www/level_ui.html" />
-        <option value="$PROJECT_DIR$/www/src/main.coffee" />
         <option value="$PROJECT_DIR$/www/css/index.css" />
         <option value="$PROJECT_DIR$/www/src/map/Map.coffee" />
-        <option value="$PROJECT_DIR$/www/src/VOB.coffee" />
         <option value="$PROJECT_DIR$/www/src/Unit.coffee" />
         <option value="$PROJECT_DIR$/www/src/AssetManager.coffee" />
+        <option value="$PROJECT_DIR$/www/src/Player.coffee" />
+        <option value="$PROJECT_DIR$/www/src/VOB.coffee" />
+        <option value="$PROJECT_DIR$/www/src/main.coffee" />
+        <option value="$PROJECT_DIR$/www/src/ui/TurnPanel.coffee" />
+        <option value="$PROJECT_DIR$/www/src/ui/Panel.coffee" />
+        <option value="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
         <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/src/Game.coffee" />
-        <option value="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
+        <option value="$PROJECT_DIR$/www/src/ui/MapView.coffee" />
+        <option value="$PROJECT_DIR$/www/src/ui/UnitView.coffee" />
       </list>
     </option>
   </component>
@@ -249,6 +286,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -377,6 +436,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/www/src/ui" />
       <recent name="$PROJECT_DIR$/www" />
       <recent name="$PROJECT_DIR$/www/assets" />
     </key>
@@ -397,6 +457,9 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -591,44 +654,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="28" selection-start="1691" selection-end="1691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/Unit.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="2" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/Game.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="33" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/assets/units.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="13" selection-start="4315" selection-end="4315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/screens/SplashScreen.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="25" selection-start="371" selection-end="371" vertical-scroll-proportion="0.30609897" />
+        <state line="14" column="25" selection-start="371" selection-end="371" vertical-scroll-proportion="0.30609897">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/main_menu.html">
@@ -643,16 +673,11 @@
         <state line="11" column="17" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="31" selection-start="620" selection-end="620" vertical-scroll-proportion="0.021864211">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/src/screens/Screen.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="183" selection-end="183" vertical-scroll-proportion="0.17491369" />
+        <state line="8" column="21" selection-start="183" selection-end="183" vertical-scroll-proportion="0.17491369">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/assets/units.json">
@@ -662,9 +687,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="77" selection-start="1776" selection-end="1776" vertical-scroll-proportion="1.1308204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/Player.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="12" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/VOB.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="165" selection-start="989" selection-end="989" vertical-scroll-proportion="0.7457818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/ui/TurnPanel.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="35" selection-start="558" selection-end="558" vertical-scroll-proportion="0.41463414">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/ui/Panel.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="27" selection-start="363" selection-end="363" vertical-scroll-proportion="0.26385808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="35" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="1170" selection-end="1170" vertical-scroll-proportion="-22.884615">
           <folding />
         </state>
       </provider>
@@ -678,14 +745,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/Game.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0">
+        <state line="26" column="34" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/screens/LevelScreen.coffee">
+    <entry file="file://$PROJECT_DIR$/www/src/ui/MapView.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="25" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.24501109">
+        <state line="30" column="31" selection-start="810" selection-end="810" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/ui/UnitView.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="105" selection-start="409" selection-end="409" vertical-scroll-proportion="0.22616407">
           <folding />
         </state>
       </provider>
