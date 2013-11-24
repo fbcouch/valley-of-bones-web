@@ -4,7 +4,8 @@
 # ahsgaming.com
 
 class Unit
-  constructor: (@unit_def, @owner) ->
+  constructor: (@unit_def, @owner, @id) ->
+    @id or= generate_id()
     @boardX = 0
     @boardY = 0
 

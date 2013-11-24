@@ -43,7 +43,14 @@ class Game
 
   do_command: () ->
 
-  attack: () ->
+  can_attack: (player_id, attacker, defender) ->
+    true
+
+  attack: (player_id, attacker, defender) ->
+    if @can_attack(player_id, attacker, defender)
+      # TODO combat
+      return true
+    false
 
   can_build: (player_id, unit_id, boardX, boardY) ->
     true
@@ -58,7 +65,16 @@ class Game
       return true
     false
 
-  move: () ->
+  can_move: (player_id, unit_id, boardX, boardY) ->
+    true
+
+  move: (player_id, unit_id, boardX, boardY) ->
+    if @can_move(player_id, unit_id, boardX, boardY)
+      unit = @get_unit_by_id(unit_id)
+      unit.boardX = boardX
+      unit.boardY = boardY
+      return true
+    false
 
   get_current_player: () ->
     @players[@current_player]
@@ -69,5 +85,9 @@ class Game
 
   get_unit_def_by_id: (unit_id) ->
     return unit for unit in preload.getResult('units').entities when unit.id is unit_id
+
+  get_unit_by_id: (unit_id) ->
+    return unit for unit in @units when unit.id is unit_id
+    null
 
 valleyofbones.Game = Game

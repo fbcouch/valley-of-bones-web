@@ -63,13 +63,20 @@ class MapView extends createjs.Container
   rebuild_units: ->
     @unit_layer.removeAllChildren()
     for unit in @units
-      unit_view = new valleyofbones.UnitView(unit)
+      unit_view = new valleyofbones.UnitView(unit, @level_screen)
+      unit_view.unit_id = unit.id
       @unit_layer.addChild(unit_view)
       unit_view.update()
+      unit_view.on 'click', (event) =>
+        @unit_clicked(event.currentTarget.unit_id)
 
   hex_clicked: (boardX, boardY) =>
     return if @dragged # dont fire this event if the map was dragged
 #    console.log "(#{boardX}, #{boardY}) clicked"
     @level_screen.map_click_callback(boardX, boardY)
+
+  unit_clicked: (unit_id) =>
+    return if @dragged
+    @level_screen.unit_click_callback(unit_id)
 
 valleyofbones.MapView = MapView

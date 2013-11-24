@@ -68,6 +68,7 @@ class LevelScreen extends valleyofbones.Screen
     return if not unit_id or @player isnt @game.get_current_player()
     console.log "build mode: #{unit_id}"
     @build_mode = unit_id
+    @selected = null
 
   build: (unit_id, boardX, boardY) ->
     console.log "Build #{unit_id} at (#{boardX}, #{boardY})"
@@ -78,11 +79,28 @@ class LevelScreen extends valleyofbones.Screen
     console.log "Move #{unit_id} to (#{boardX}, #{boardY})"
     @game.move(@player.id, unit_id, boardX, boardY)
 
+  attack: (attacker, defender) ->
+    console.log "Attack #{attacker} to #{defender}"
+    @game.attack(@player.id, attacker, defender)
+
   map_click_callback: (boardX, boardY) ->
     if @build_mode?
       @build(@build_mode, boardX, boardY)
-    if @selected?
+    else if @selected?
       @move(@selected, boardX, boardY)
+
+  unit_click_callback: (unit_id) ->
+    @build_mode = null
+    if not @selected
+      @selected = unit_id
+    else
+      if @game.get_unit_by_id(@selected).owner is @player
+        if @game.get_unit_by_id(unit_id).owner is @player
+          @selected = unit_id
+        else
+          @attack(@selected, unit_id)
+      else
+        @selected = unit_id
 
   end_turn: ->
     if @player is @game.get_current_player()
