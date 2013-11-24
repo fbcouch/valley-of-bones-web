@@ -4,7 +4,7 @@
 # ahsgaming.com
 
 class TurnPanel extends valleyofbones.Panel
-  constructor: (@game) ->
+  constructor: (@game, @level_screen) ->
     super()
 
 #    @timer_text = new createjs.Text '', 'normal 40px courier', '#CCC'
@@ -25,7 +25,7 @@ class TurnPanel extends valleyofbones.Panel
     @btn_end_turn = new valleyofbones.Button('END TURN', btn_style)
     @addChild @btn_end_turn
     @btn_end_turn.on 'click', =>
-      console.log 'clicked'
+      @level_screen.end_turn()
 
     @player_texts = {}
 
@@ -33,6 +33,8 @@ class TurnPanel extends valleyofbones.Panel
     @addChild(@turn_indicator)
 
   update: (delta) ->
+    @btn_end_turn.style.background = if (@game.get_current_player() is @level_screen.player) then '#ccc' else '#333'
+
     @btn_end_turn.layout()
     y = 0
     x = @turn_indicator.width + 5

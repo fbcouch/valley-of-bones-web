@@ -4,7 +4,7 @@
 # ahsgaming.com
 
 class MapView extends createjs.Container
-  constructor: (@game) ->
+  constructor: (@game, @level_screen) ->
     @initialize()
 
     @tile_layer = new createjs.Container()
@@ -24,9 +24,24 @@ class MapView extends createjs.Container
           @tile_layer.addChild bitmap
           bitmap.x = c * bitmap.width + (if r % 2 is 1 then bitmap.width * 0.5 else 0)
           bitmap.y = r * bitmap.height * 0.75
+          bitmap.boardX = c
+          bitmap.boardY = r
+          bitmap.on 'click', (event) =>
+            @hex_clicked(event.currentTarget.boardX, event.currentTarget.boardY)
 
     @addChild(@tile_layer)
     @addChild(@unit_layer)
+
+    @on 'mousedown', (evt) ->
+      @dragged = false
+      @offset =
+        x: @x - evt.stageX
+        y: @y - evt.stageY
+
+    @on 'pressmove', (evt) ->
+      @dragged = true
+      @x = evt.stageX + @offset.x
+      @y = evt.stageY + @offset.y
 
     @game.on 'units_changed', =>
       @rebuild_units()
@@ -50,6 +65,11 @@ class MapView extends createjs.Container
     for unit in @units
       unit_view = new valleyofbones.UnitView(unit)
       @unit_layer.addChild(unit_view)
+      unit_view.update()
 
+  hex_clicked: (boardX, boardY) =>
+    return if @dragged # dont fire this event if the map was dragged
+#    console.log "(#{boardX}, #{boardY}) clicked"
+    @level_screen.map_click_callback(boardX, boardY)
 
 valleyofbones.MapView = MapView
