@@ -26,6 +26,7 @@ class Game
       @units.push unit
       unit.boardX = 1 + 17 * i
       unit.boardY = 4
+      unit.status.curhp = 50
     @dispatchEvent('units_changed')
 
     @start_turn(@current_player)
@@ -33,6 +34,9 @@ class Game
   end_game: () ->
 
   start_turn: (player) ->
+    for unit in @units when unit.owner.id is @players[player].id
+      unit.status.moves_left = unit.status.movespeed
+      unit.status.attacks_left = unit.status.attackspeed
 
   update: (delta) ->
     player.update?(delta, @) for player in @players

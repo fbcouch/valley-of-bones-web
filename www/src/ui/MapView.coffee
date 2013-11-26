@@ -62,10 +62,13 @@ class MapView extends createjs.Container
           for y in [unit.boardY - unit.status.attackrange..unit.boardY + unit.status.attackrange]
             if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.attackrange
               @tiles[y][x].state = 'visible'
-        for x in [unit.boardX - unit.status.movespeed..unit.boardX + unit.status.movespeed]
-          for y in [unit.boardY - unit.status.movespeed..unit.boardY + unit.status.movespeed]
-            if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.movespeed and @tiles[y][x].state is 'visible'
-              @tiles[y][x].state = 'highlight'
+
+    if @level_screen.selected?
+      unit = @game.get_unit_by_id(@level_screen.selected)
+      for x in [unit.boardX - unit.status.movespeed..unit.boardX + unit.status.movespeed]
+        for y in [unit.boardY - unit.status.movespeed..unit.boardY + unit.status.movespeed]
+          if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.movespeed and @tiles[y][x].state is 'visible'
+            @tiles[y][x].state = 'highlight'
 
     for row in @tiles
       for tile in row
@@ -89,15 +92,24 @@ class MapView extends createjs.Container
     {width: @width, height: @height} = @getBounds() if @children.length > 0
 
   rebuild_units: ->
-
+    @unit_views or= {}
     @unit_layer.removeAllChildren()
+    ids = []
     for unit in @units
-      unit_view = new valleyofbones.UnitView(unit, @level_screen)
-      unit_view.unit_id = unit.id
-      @unit_layer.addChild(unit_view)
-      unit_view.update()
-      unit_view.on 'click', (event) =>
-        @unit_clicked(event.currentTarget.unit_id)
+      if not @unit_views[unit.id]?
+        unit_view = new valleyofbones.UnitView(unit, @level_screen)
+        unit_view.unit_id = unit.id
+        @unit_views[unit.id] = unit_view
+        unit_view.update()
+        unit_view.on 'click', (event) =>
+          @unit_clicked(event.currentTarget.unit_id)
+      ids.push(unit.id)
+
+    for id, view of @unit_views
+      if id not in ids
+        @unit_views[id] = null
+      else
+        @unit_layer.addChild view
 
   hex_clicked: (boardX, boardY) =>
     return if @dragged # dont fire this event if the map was dragged
