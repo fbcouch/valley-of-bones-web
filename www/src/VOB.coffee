@@ -26,6 +26,7 @@ class VOB
 
   update: (delta) ->
     @screen?.update(delta)
+    @game?.update?(delta)
 
   setSplashScreen: () ->
     console.log 'setSplashScreen'
@@ -37,7 +38,9 @@ class VOB
 
   setLevelScreen: () ->
     console.log 'setLevelScreen'
-    players = [new valleyofbones.Player(generate_id(), 'Player 1', [1, 0, 0]), new valleyofbones.Player(generate_id(), 'Player 2', [0, 0, 1])]
-    @setScreen(new valleyofbones.LevelScreen(new valleyofbones.Game('test_level', players), players[0]))
+
+    players = [new valleyofbones.Player(generate_id(), 'Player 1', [1, 0, 0]), new valleyofbones.AIPlayer(generate_id(), 'Player 2', [0, 0, 1])]
+    @game = new valleyofbones.Game('test_level', players)
+    @setScreen(new valleyofbones.LevelScreen(@game, players[0]))
 
 valleyofbones.VOB = VOB

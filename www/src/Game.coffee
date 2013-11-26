@@ -34,6 +34,9 @@ class Game
 
   start_turn: (player) ->
 
+  update: (delta) ->
+    player.update?(delta, @) for player in @players
+
   end_turn: (player_id) ->
     if @get_current_player().id is player_id
       @current_player = (@current_player + 1) % @players.length
@@ -61,6 +64,7 @@ class Game
       unit.boardX = boardX
       unit.boardY = boardY
       @units.push unit
+
       @dispatchEvent('units_changed')
       return true
     false

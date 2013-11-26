@@ -8,6 +8,6 @@ class Player
     @money = 0
     @income = 0
     @max_supply = 0
-    @units = {}
+    @units = []
 
 valleyofbones.Player = Player

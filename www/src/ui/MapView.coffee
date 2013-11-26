@@ -51,6 +51,34 @@ class MapView extends createjs.Container
     @update()
 
   update: (delta) ->
+    for row in @tiles
+      for tile in row
+        tile.state = 'fog'
+
+    for unit in @units
+      if unit.owner is @level_screen.player
+        @tiles[unit.boardY][unit.boardX].state = 'dim'
+        for x in [unit.boardX - unit.status.attackrange..unit.boardX + unit.status.attackrange]
+          for y in [unit.boardY - unit.status.attackrange..unit.boardY + unit.status.attackrange]
+            if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.attackrange
+              @tiles[y][x].state = 'visible'
+        for x in [unit.boardX - unit.status.movespeed..unit.boardX + unit.status.movespeed]
+          for y in [unit.boardY - unit.status.movespeed..unit.boardY + unit.status.movespeed]
+            if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.movespeed and @tiles[y][x].state is 'visible'
+              @tiles[y][x].state = 'highlight'
+
+    for row in @tiles
+      for tile in row
+        switch tile.state
+          when 'fog'
+            tile.filters = [new createjs.ColorFilter(0.4, 0.4, 0.4, 1)]
+          when 'dim'
+            tile.filters = [new createjs.ColorFilter(0.6, 0.6, 0.6, 1)]
+          when 'visible'
+            tile.filters = [new createjs.ColorFilter(0.8, 0.8, 0.8, 1)]
+          when 'highlight'
+            tile.filters = [new createjs.ColorFilter(1, 1, 1, 1)]
+        tile.cache(0, 0, 64, 64)
 
     for child in @children
       for c in child.children
@@ -61,6 +89,7 @@ class MapView extends createjs.Container
     {width: @width, height: @height} = @getBounds() if @children.length > 0
 
   rebuild_units: ->
+
     @unit_layer.removeAllChildren()
     for unit in @units
       unit_view = new valleyofbones.UnitView(unit, @level_screen)
