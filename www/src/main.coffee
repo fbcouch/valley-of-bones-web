@@ -33,7 +33,8 @@ $(document).on 'ready', ->
 
   window.canvas = $('#gameCanvas')[0]
   window.stage = new createjs.Stage canvas
-
+  canvas.onclick = () ->
+    console.log 'ping'
   createjs.Touch.enable(stage)
   window.game = new valleyofbones.VOB(stage)
 
@@ -58,6 +59,11 @@ $(document).on 'ready', ->
     createjs.Ticker.addEventListener 'tick', (event) ->
       stage.update(event)
       game.update(event.delta / 1000) if event.delta
+      if not debug_timer
+        debug_timer = 1000
+        console.log "FPS: #{(1000 / event.delta)|2}"
+      debug_timer -= event.delta
+      debug_timer = 0 if debug_timer < 0
 
 
 

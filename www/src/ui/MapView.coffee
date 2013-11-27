@@ -70,18 +70,18 @@ class MapView extends createjs.Container
           if @tiles[y]?[x]? and @game.map.get_map_dist(unit.boardX, unit.boardY, x, y) <= unit.status.movespeed and @tiles[y][x].state is 'visible'
             @tiles[y][x].state = 'highlight'
 
-    for row in @tiles
-      for tile in row
-        switch tile.state
-          when 'fog'
-            tile.filters = [new createjs.ColorFilter(0.4, 0.4, 0.4, 1)]
-          when 'dim'
-            tile.filters = [new createjs.ColorFilter(0.6, 0.6, 0.6, 1)]
-          when 'visible'
-            tile.filters = [new createjs.ColorFilter(0.8, 0.8, 0.8, 1)]
-          when 'highlight'
-            tile.filters = [new createjs.ColorFilter(1, 1, 1, 1)]
-        tile.cache(0, 0, 64, 64)
+#    for row in @tiles
+#      for tile in row
+#        switch tile.state
+#          when 'fog'
+#            tile.filters = [new createjs.ColorFilter(0.4, 0.4, 0.4, 1)]
+#          when 'dim'
+#            tile.filters = [new createjs.ColorFilter(0.6, 0.6, 0.6, 1)]
+#          when 'visible'
+#            tile.filters = [new createjs.ColorFilter(0.8, 0.8, 0.8, 1)]
+#          when 'highlight'
+#            tile.filters = [new createjs.ColorFilter(1, 1, 1, 1)]
+#        tile.cache(0, 0, 64, 64)
 
     for child in @children
       for c in child.children

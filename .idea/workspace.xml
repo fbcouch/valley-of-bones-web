@@ -2,15 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24a86ab6-7e5a-410e-92c2-a7db22becf49" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/Game.coffee" afterPath="$PROJECT_DIR$/www/src/Game.coffee" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/src/screen.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/HelloCordova-debug-unaligned.apk" afterPath="$PROJECT_DIR$/platforms/android/bin/HelloCordova-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/HelloCordova-debug.apk" afterPath="$PROJECT_DIR$/platforms/android/bin/HelloCordova-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/HelloCordova.ap_" afterPath="$PROJECT_DIR$/platforms/android/bin/HelloCordova.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/dexedLibs/cordova-3.1.0-2fbe95da278b085e5eebf050af689fae.jar" afterPath="$PROJECT_DIR$/platforms/android/bin/dexedLibs/cordova-3.1.0-2fbe95da278b085e5eebf050af689fae.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/bin/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/HelloCordova.ap_.d" afterPath="$PROJECT_DIR$/platforms/android/bin/HelloCordova.ap_.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/ui/MapView.coffee" afterPath="$PROJECT_DIR$/www/src/ui/MapView.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/ui/UnitView.coffee" afterPath="$PROJECT_DIR$/www/src/ui/UnitView.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/platforms/android/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/src/main.coffee" afterPath="$PROJECT_DIR$/platforms/android/assets/www/src/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/src/main.coffee" afterPath="$PROJECT_DIR$/www/src/main.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/main_menu.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/main_menu.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="valley-of-bones-web.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/index.html" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385324557580" ignored="false" />
-    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385251394355" ignored="false" />
+    <file path="/main.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385510439660" ignored="false" />
     <file path="/a.dummy" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038877375" ignored="false" />
     <file path="/units.json" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385038950936" ignored="false" />
     <file path="/Dummy.txt" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385507085881" ignored="false" />
@@ -35,6 +47,7 @@
     <file path="/UIElement.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385253669607" ignored="false" />
     <file path="/ImageButton.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385253190926" ignored="false" />
     <file path="/AIPlayer.coffee" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385324619564" ignored="false" />
+    <file path="/AndroidManifest.xml" changelist="24a86ab6-7e5a-410e-92c2-a7db22becf49" time="1385511621038" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,10 +110,37 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="MapView.coffee" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="MapView.coffee" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/www/src/ui/MapView.coffee">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="105" column="23" selection-start="3729" selection-end="3729" vertical-scroll-proportion="0.5992991">
+                <state line="83" column="33" selection-start="2351" selection-end="2836" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="57" column="7" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="269" selection-start="308" selection-end="308" vertical-scroll-proportion="0.023631841">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/www/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="48" column="26" selection-start="1646" selection-end="1646" vertical-scroll-proportion="-25.785715">
                   <folding />
                 </state>
               </provider>
@@ -166,22 +206,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/src/ui/ImageButton.coffee" />
         <option value="$PROJECT_DIR$/www/src/ui/BuildPanel.coffee" />
         <option value="$PROJECT_DIR$/www/src/ui/UIElement.coffee" />
         <option value="$PROJECT_DIR$/www/src/ui/TurnPanel.coffee" />
         <option value="$PROJECT_DIR$/www/src/ui/Button.coffee" />
-        <option value="$PROJECT_DIR$/www/src/main.coffee" />
         <option value="$PROJECT_DIR$/www/src/screens/LevelScreen.coffee" />
         <option value="$PROJECT_DIR$/www/src/Player.coffee" />
-        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/src/AIPlayer.coffee" />
         <option value="$PROJECT_DIR$/www/src/Unit.coffee" />
         <option value="$PROJECT_DIR$/www/src/VOB.coffee" />
         <option value="$PROJECT_DIR$/www/src/map/Map.coffee" />
         <option value="$PROJECT_DIR$/www/src/Game.coffee" />
         <option value="$PROJECT_DIR$/www/src/ui/UnitView.coffee" />
+        <option value="$PROJECT_DIR$/www/index.html" />
         <option value="$PROJECT_DIR$/www/src/ui/MapView.coffee" />
+        <option value="$PROJECT_DIR$/www/src/main.coffee" />
+        <option value="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -399,6 +439,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="platforms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valley-of-bones-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="art" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -576,7 +634,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -667,18 +725,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/www/src/ui/UIElement.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="69" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="846" selection-end="846" vertical-scroll-proportion="0.7172178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/assets/units.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.06884058">
@@ -699,13 +745,6 @@
     <entry file="file://$PROJECT_DIR$/www/src/ui/BuildPanel.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="117" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1546" selection-end="1546" vertical-scroll-proportion="-24.884615">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/Player.coffee">
@@ -756,7 +795,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/src/ui/MapView.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="23" selection-start="3729" selection-end="3729" vertical-scroll-proportion="0.5992991">
+        <state line="83" column="33" selection-start="2351" selection-end="2836" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="26" selection-start="1646" selection-end="1646" vertical-scroll-proportion="-25.785715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/src/main.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/platforms/android/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="269" selection-start="308" selection-end="308" vertical-scroll-proportion="0.023631841">
           <folding />
         </state>
       </provider>

@@ -18,12 +18,24 @@ manifest = [
 
 #$('body').append("<script src=\"out/#{file}.js\"></script>") for file in sources
 
+window.generate_id = ->
+  _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+  (
+    (
+      for i in [0...16]
+        _keyStr.charAt(Math.random() * _keyStr.length)
+    )
+  ).join('')
+
 $(document).on 'ready', ->
   console.log 'ready'
   window.preload = new createjs.LoadQueue()
 
   window.canvas = $('#gameCanvas')[0]
   window.stage = new createjs.Stage canvas
+  canvas.onclick = () ->
+    console.log 'ping'
+  createjs.Touch.enable(stage)
   window.game = new valleyofbones.VOB(stage)
 
   canvas.width = document.documentElement.clientWidth
@@ -40,13 +52,18 @@ $(document).on 'ready', ->
   preload.loadManifest manifest
   preload.addEventListener 'complete', =>
     # do something
-    window.asset_mgr = new AssetManager(preload.getResult('assets-img'), preload.getResult('assets-json'))
+    window.asset_mgr = new valleyofbones.AssetManager(preload.getResult('assets-img'), preload.getResult('assets-json'))
 
     game.start()
 
     createjs.Ticker.addEventListener 'tick', (event) ->
       stage.update(event)
       game.update(event.delta / 1000) if event.delta
+      if not debug_timer
+        debug_timer = 1000
+        console.log "FPS: #{(1000 / event.delta)|2}"
+      debug_timer -= event.delta
+      debug_timer = 0 if debug_timer < 0
 
 
 
@@ -55,55 +72,6 @@ $(document).on 'ready', ->
     $('#ui .progress span').html("Loading #{progress.loaded * 100|0}%")
 
 
-class AssetManager
-  constructor: (@image, @json) ->
 
-  get: (key) ->
-    @json.frames["#{key}.png"] or {}
-
-  get_bitmap: (key) ->
-    bitmap = new createjs.Bitmap @image
-    defs = @get(key)
-    bitmap.sourceRect =
-      x:      defs.frame.x
-      y:      defs.frame.y
-      width:  defs.frame.w
-      height: defs.frame.h
-    bitmap.width = defs.frame.w
-    bitmap.height = defs.frame.h
-    bitmap
-
-class VOB
-  constructor: (@stage) ->
-    @screen = null
-
-  resize: (@width, @height) ->
-    @screen?.resize(@width, @height)
-
-  start: () ->
-#    @setSplashScreen()
-     @setMainMenuScreen()
-
-  setScreen: (screen) ->
-    if @screen?
-      @stage.removeChild @screen
-      @screen.hide()
-    @screen = screen
-    @stage.addChild @screen
-    @screen.show()
-    @screen.resize(@width, @height)
-
-  update: (delta) ->
-    @screen?.update(delta)
-
-  setSplashScreen: () ->
-    console.log 'setSplashScreen'
-    @setScreen(new valleyofbones.SplashScreen(@))
-
-  setMainMenuScreen: () ->
-    console.log 'setMainMenuScreen'
-    @setScreen(new valleyofbones.MainMenuScreen(@))
-
-valleyofbones.VOB = VOB
 
 
